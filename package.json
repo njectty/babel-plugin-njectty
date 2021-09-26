@@ -1,0 +1,31 @@
+{
+    "name": "babel-plugin-njectty",
+    "version": "0.7.0",
+    "description": "",
+    "author": {
+        "name": "Pavel Dymkov",
+        "email": "njectty@gmail.com"
+    },
+    "license": "ISC",
+    "keywords": [],
+    "main": "index.js",
+    "scripts": {
+        "build": "node build.js",
+        "start": "babel src --config-file ./src/.babelrc.json --out-dir package --watch",
+        "test": "npm run test:javascript && npm run test:typescript",
+        "test:javascript": "mocha --config test/javascript/mocha.config.js",
+        "test:typescript": "mocha --config test/typescript/mocha.config.js"
+    },
+    "dependencies": {
+        "logical-not": "^1.0.9"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.15.4",
+        "@babel/core": "^7.15.5",
+        "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+        "babel-plugin-test-helper": "^1.0.0",
+        "mocha": "^9.1.1",
+        "prettier": "^2.3.2",
+        "shelljs": "^0.8.4"
+    }
+}
